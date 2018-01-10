@@ -5,12 +5,6 @@ const filterReducerDefaultState = {
   endDate: undefined
 };
 
-const newArray = ['a','b']
-const arrayNew =[...newArray,'c','d']
-console.log(newArray);
-console.log(arrayNew);
-
-
 export default ( state = filterReducerDefaultState, action) => {
   switch (action.type) {
 

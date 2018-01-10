@@ -24,7 +24,7 @@ state = store.getState();
 visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 console.log(visibleExpenses);
 
-store.dispatch(setTextfilter('Gas'));
+store.dispatch(setTextfilter('Bill'));
 state = store.getState();
 visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 console.log(visibleExpenses);
