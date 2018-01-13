@@ -7,7 +7,6 @@ const ExpenseListFilters = (props) => (
     <input type="text" defaultValue={props.filters.text}
             onChange={(e) =>{
                 props.dispatch(setTextfilter(e.target.value));
-                console.log(e.target.value);
             }
     } />
     <select
