@@ -7,15 +7,18 @@ import 'react-dates/lib/css/_datepicker.css';
 const date = moment();
 console.log(date.format());
 
-export default class ExpenseForm extends React.Component {
-  state = {
-    description: '',
-    note: '',
-    acmount:'',
-    createdAt: moment(),
-    calendarFocused: false,
-    error: undefined
-  };
+ export default class ExpenseForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      description: props.expense ? props.expense.description : '',
+      note: props.expense ? props.expense.note : '',
+      acmount:props.expense ? (props.expense.amount/100).toString()  : '',
+      createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+      calendarFocused: false,
+      error: undefined
+    };
+  }
 
   onDescriptionChange = (e) => {
     const description = e.target.value;
